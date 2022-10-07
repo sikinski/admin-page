@@ -8,8 +8,22 @@
     justify-content: center
     align-items: center
 .view
-    margin-left: 15%
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 35px
+    margin-left: 17%
     min-height: calc(100vh - 65px)
+    .cards-container
+        display: flex
+        padding: 42px 0
+        width: 100%
+        flex-wrap: wrap
+        .card
+            min-width: 45%
+            padding: 12px 15px
+            background-color: #fff
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px
 #app
     background-color: var(--main-bg-color)
     min-height: 100vh
