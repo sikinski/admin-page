@@ -1,7 +1,9 @@
 <template>
   <AdminNav />
   <AdminHeader />
-  <router-view />
+  <div class="inner-block">
+    <router-view />
+  </div>
 </template>
 
 <script>

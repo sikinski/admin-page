@@ -6,6 +6,7 @@ import StatView from "../views/StatView.vue";
 import ProjectsITView from "../views/ProjectsITView.vue";
 import ArbitrazView from "../views/ArbitrazView";
 import TGChannelsView from "../views/TGChannelsView";
+import WorkersView from "../views/WorkersView";
 
 const routes = [
   {
@@ -37,9 +38,14 @@ const routes = [
     ],
   },
   {
-    path: "/stat",
+    path: "/stats",
     name: "Statistics",
     component: StatView,
+  },
+  {
+    path: "/workers",
+    name: "Workers",
+    component: WorkersView,
   },
 ];
 

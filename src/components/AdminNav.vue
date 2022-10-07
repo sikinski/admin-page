@@ -37,7 +37,7 @@
         </ul>
       </router-link>
 
-      <router-link to="/stat" class="nav-link"
+      <router-link to="/stats" class="nav-link"
         ><p>
           <span class="icon"
             ><img
@@ -46,7 +46,7 @@
           >Статистика
         </p></router-link
       >
-      <router-link to="/stat" class="nav-link"
+      <router-link to="/workers" class="nav-link"
         ><p>
           <span class="icon"
             ><img
