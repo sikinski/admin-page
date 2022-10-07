@@ -1,5 +1,5 @@
 <template>
-  <router-view />
+  <div id="arbitraz" class="view flex-center">Arbitraz</div>
 </template>
 
 <script>

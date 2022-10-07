@@ -1,5 +1,5 @@
 <template>
-  <router-view />
+  <div id="tg-channels" class="view flex-center">TG</div>
 </template>
 
 <script>

@@ -19,7 +19,7 @@ export default {};
 
 <style lang="sass">
 #header
-    height: 7vh
+    height: 65px
     background-color: var(--main-color)
     color: var(--light-color)
     padding: 0 45px

@@ -1,5 +1,5 @@
 <template>
-  <router-view />
+  <div id="projects-IT" class="view flex-center">IT PROJECTS</div>
 </template>
 
 <script>
