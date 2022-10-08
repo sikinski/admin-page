@@ -1,9 +1,15 @@
 <template>
-  <div id="home" class="view flex-center">Home Page</div>
+  <div id="home" class="view flex-center">
+    <WeatherWidget />
+    <h1 class="welcome-text">
+      Приветствую тебя, User Name. <br />Продуктивного дня! ✅
+    </h1>
+  </div>
 </template>
 
 <script>
-export default {};
+import WeatherWidget from "@/components/WeatherWidget.vue";
+export default { components: { WeatherWidget } };
 </script>
 
 <style lang="sass"></style>
