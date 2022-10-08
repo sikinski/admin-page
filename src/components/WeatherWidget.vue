@@ -48,6 +48,7 @@ export default {
     background-color: #7ea9d3
     border-radius: 16px
     padding: 22px
+
     .bg-image
         position: absolute
         width: 100%

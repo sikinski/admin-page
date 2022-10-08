@@ -4,12 +4,23 @@
     <h1 class="welcome-text">
       Приветствую тебя, User Name. <br />Продуктивного дня! ✅
     </h1>
+
+    <ToDo />
   </div>
 </template>
 
 <script>
 import WeatherWidget from "@/components/WeatherWidget.vue";
-export default { components: { WeatherWidget } };
+import ToDo from "@/components/ToDo.vue";
+export default { components: { WeatherWidget, ToDo } };
 </script>
 
-<style lang="sass"></style>
+<style lang="sass">
+#home
+  display: grid
+  grid-template-columns: auto 1fr
+  grid-template-rows: auto 1fr
+  .welcome-text
+    text-align: center
+    color: darken(gray, 20%)
+</style>
