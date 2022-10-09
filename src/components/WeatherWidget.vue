@@ -51,9 +51,9 @@ export default {
 
     .bg-image
         position: absolute
-        width: 100%
         height: 100%
         top: 0
+        right: 0
     .name-city
         z-index: 1
         font-size: 1.8rem
