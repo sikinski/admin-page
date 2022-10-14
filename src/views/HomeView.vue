@@ -2,7 +2,8 @@
   <div id="home" class="view flex-center">
     <WeatherWidget />
     <h1 class="welcome-text">
-      Приветствую тебя, User Name. <br />Продуктивного дня! ✅
+      Приветствую тебя, {{ this.$store.state.userData.FullName }}
+      <br />Продуктивного дня! ✅
     </h1>
     <!-- <ToDo /> -->
   </div>

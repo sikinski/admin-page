@@ -7,7 +7,7 @@
           alt="user-image"
           class="user-image"
         />
-        <p class="name">User Name</p>
+        <p class="name">{{ this.$store.state.userData.FullName }}</p>
       </div>
     </div>
   </header>

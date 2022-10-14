@@ -1,10 +1,12 @@
 <template>
-  <!-- <AdminAuth /> -->
-  <AdminNav />
-  <AdminHeader />
-  <div class="inner-block">
-    <router-view />
-  </div>
+  <AdminAuth v-if="!this.$store.state.authorized" />
+  <template v-if="this.$store.state.authorized">
+    <AdminNav />
+    <AdminHeader />
+    <div class="inner-block">
+      <router-view />
+    </div>
+  </template>
 </template>
 
 <script>

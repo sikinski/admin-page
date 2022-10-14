@@ -34,6 +34,7 @@ export default {
   },
   methods: {
     async userEnter() {
+      console.log(this.$store.state.authorized);
       const userData = {
         username: this.username,
         password: this.pass,
@@ -48,7 +49,15 @@ export default {
 
       const url = "http://localhost:8080/auth";
 
-      await axios.post(url, userData, axiosConfig.headers);
+      await axios.post(url, userData, axiosConfig.headers).then((res) => {
+        console.log(res);
+        if (res.data) {
+          this.$store.state.authorized = true;
+          this.$store.state.userData = res.data;
+          console.log(this.$store.state.userData);
+        }
+      });
+      console.log(this.$store.state.authorized);
     },
   },
 };
@@ -68,7 +77,6 @@ export default {
         justify-content: space-evenly
         width: 30%
         padding: 30px
-        height: 50%
         position: fixed
         top: 50%
         left: 50%
