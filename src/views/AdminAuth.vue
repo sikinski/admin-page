@@ -17,7 +17,9 @@
         />
         <button @click.prevent="userEnter" class="sign-in">Войти</button>
       </form>
-      <!-- <p class="error">Администратор с таким логином и паролем не найден</p> -->
+      <p v-if="showError" class="error">
+        Администратор с таким логином и паролем не найден
+      </p>
     </div>
   </div>
 </template>
@@ -30,6 +32,7 @@ export default {
     return {
       username: "",
       pass: "",
+      showError: false,
     };
   },
   methods: {
@@ -50,14 +53,13 @@ export default {
       const url = "http://localhost:8080/auth";
 
       await axios.post(url, userData, axiosConfig.headers).then((res) => {
-        console.log(res);
-        if (res.data) {
+        if (!res.data) {
+          this.showError = true;
+        } else {
           this.$store.state.authorized = true;
           this.$store.state.userData = res.data;
-          console.log(this.$store.state.userData);
         }
       });
-      console.log(this.$store.state.authorized);
     },
   },
 };
@@ -110,4 +112,5 @@ export default {
                     background-color: darken(gray, 5%)
         .error
             color: #B22222 // dark red
+            margin-top: 16px
 </style>

@@ -21,7 +21,7 @@ export default {
 #home
   display: grid
   grid-template-columns: auto 1fr
-  grid-template-rows: auto 1fr
+  grid-template-rows: 40% 1fr
   .welcome-text
     text-align: center
     color: var(--dark-gray-color)
