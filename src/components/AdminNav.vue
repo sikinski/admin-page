@@ -18,25 +18,34 @@
         </p>
       </router-link>
 
-      <router-link to="/projects" class="nav-link"
+      <router-link to="/projects/IT" class="nav-link"
         ><p>
           <span class="icon"
             ><img
-              src="https://cdn-icons-png.flaticon.com/512/1383/1383970.png"
+              src="https://cdn-icons-png.flaticon.com/512/3474/3474360.png"
               alt="" /></span
-          >Проекты
-        </p>
-        <ul class="projects-list dropdown">
-          <router-link to="/projects/IT" class="project-item">IT</router-link>
-          <router-link to="/projects/arbitraz" class="project-item"
-            >Арбитраж</router-link
-          >
-          <router-link to="/projects/tg" class="project-item"
-            >Telegram-каналы</router-link
-          >
-        </ul>
-      </router-link>
+          >IT
+        </p></router-link
+      >
+      <router-link to="/projects/arbitraz" class="nav-link"
+        ><p>
+          <span class="icon"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/925/925748.png"
+              alt="" /></span
+          >Арбитраж
+        </p></router-link
+      >
 
+      <router-link to="/projects/tg" class="nav-link"
+        ><p>
+          <span class="icon"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/739/739260.png"
+              alt="" /></span
+          >Телеграм
+        </p></router-link
+      >
       <router-link to="/stats" class="nav-link"
         ><p>
           <span class="icon"
@@ -106,20 +115,4 @@ export default {};
                 margin-right: 20px
                 img
                     max-width: 100%
-            .dropdown
-                display: flex
-                flex-direction: column
-                padding-left: 50px
-                visibility: hidden
-                opacity: 0
-                height: 0
-                .project-item
-                    padding: 5px 0
-                    font-size: 1rem
-        .nav-link:hover .dropdown
-            opacity: 1
-            visibility: visible
-            height: auto
-            margin: 4% 0 7% 0
-            animation: fadeIn 0.5s
 </style>

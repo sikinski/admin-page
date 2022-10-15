@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     getGoogleSheets() {
-      const url = "url/gviz/tq?";
+      const url = "url";
 
       fetch(url)
         .then((res) => res.text())
@@ -74,5 +74,6 @@ export default {
         background-color: #ADD8E6
       td, th
         border: 1px solid black
-        padding: 14px 9px
+        text-align: center
+        padding: 14px 12px
 </style>
