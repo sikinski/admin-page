@@ -47,6 +47,7 @@ export default {
   width: 100%
   display: flex
   justify-content: space-between
+  align-items: center
   .title
     margin: 16px 0
   .dates

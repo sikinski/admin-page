@@ -36,7 +36,8 @@ export default {
   },
   methods: {
     getGoogleSheets() {
-      const url = "url";
+      const url =
+        "https://docs.google.com/spreadsheets/d/1VvTepRhKaHLKQA3s0wqzSR5i_Q5DAsPwLH5qIM9nuDM/gviz/tq?";
 
       fetch(url)
         .then((res) => res.text())

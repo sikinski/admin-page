@@ -21,36 +21,56 @@
       <label for="name"
         >Введите название проекта (например, "интернет-магазин Zenden")</label
       >
-      <input type="text" class="input" name="name" placeholder="Название" />
+      <input
+        type="text"
+        class="input"
+        v-model="taskData.name"
+        name="name"
+        placeholder="Название"
+      />
       <label for="desc">Введите описание проекта</label>
-      <input type="text" name="desc" class="input" placeholder="Описание" />
+      <input
+        type="text"
+        name="desc"
+        class="input"
+        v-model="taskData.desc"
+        placeholder="Описание"
+      />
       <div class="dates">
         <label for="date-start">Дата начала:</label>
         <input
-          type="date"
+          type="text"
           name="date-start"
           class="input"
+          v-model="taskData.dateStart"
           placeholder="Дата начала"
         />
         <label for="date-end">Дата завершения:</label>
         <input
-          type="date"
+          type="text"
           name="date-end"
           class="input"
+          v-model="taskData.dateEnd"
           placeholder="Дата завершения"
         />
       </div>
 
-      <label for="points">Введите задачи через запятую</label>
+      <!-- <label for="points">Введите задачи через запятую</label>
       <textarea
         type="text"
         class="input textarea"
         name="points"
         placeholder="Сверстать главную, создать
         базу данных"
-      ></textarea>
+      ></textarea> -->
 
-      <button class="create-project">Создать</button>
+      <button
+        @click.prevent="createProject"
+        type="submit"
+        class="create-project"
+      >
+        Создать
+      </button>
     </form>
 
     <div class="cards-container">
@@ -61,15 +81,35 @@
 
 <script>
 import CardIT from "../components/UI/CardIT.vue";
+import axios from "axios";
 export default {
   data() {
     return {
+      taskData: {
+        name: "",
+        desc: "",
+        dateStart: "",
+        dateEnd: "",
+      },
       showForm: false,
     };
   },
   methods: {
     openForm() {
       this.showForm = !this.showForm;
+    },
+    async createProject() {
+      const taskData = {
+        name: this.taskData.name,
+        description: this.taskData.desc,
+        dateStart: this.taskData.dateStart,
+        dateEnd: this.taskData.dateEnd,
+      };
+
+      const url = "http://localhost:8080/createTaskIT";
+      await axios.post(url, taskData).then((res) => {
+        console.log(res);
+      });
     },
   },
   components: { CardIT },
